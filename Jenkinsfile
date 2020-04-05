@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 pipeline {
     agent {
         docker {
@@ -20,7 +19,7 @@ pipeline {
         stage('Deliver') {
             steps {
                 echo 'current path ******************'
-                sh './jenkins/scripts/deliver.sh'
+                sh 'bash ./jenkins/scripts/deliver.sh'
             }
         }
     }
