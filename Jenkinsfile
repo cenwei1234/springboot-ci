@@ -20,6 +20,7 @@ pipeline {
         stage('Deliver') {
             steps {
                 echo 'current path ******************'
+                sh 'pwd'
                 sh './jenkins/scripts/deliver.sh'
             }
         }
