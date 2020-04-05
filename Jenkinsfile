@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo 'current path ******************'
                 sh 'pwd'
-                sh './jenkins/scripts/deliver.sh'
+                echo 'delivery' 
             }
         }
     }
