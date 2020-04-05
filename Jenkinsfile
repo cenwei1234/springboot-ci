@@ -1,4 +1,3 @@
-#!/bin/sh
 pipeline {
     agent {
         docker {
