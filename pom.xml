@@ -43,7 +43,6 @@
        <plugin>
 	    <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
-	        <version>3.0.2</version>
       <configuration>
            <encoding>utf-8</encoding>
            <source>1.8</source>
@@ -51,8 +50,6 @@
            <archive>
               <manifest>
                  <mainClass>com.example.springbootci.SpringbootCiApplication</mainClass>
-                 <addClasspath>true</addClasspath>
-                 <classpathPrefix>lib/</classpathPrefix>
                </manifest>
             </archive>
        </configuration>
