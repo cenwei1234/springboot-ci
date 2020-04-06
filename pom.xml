@@ -10,9 +10,9 @@
     </parent>
     <groupId>com.example</groupId>
     <artifactId>springboot-ci</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-ci</name>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
+    <name>springboot-ci</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -39,29 +39,12 @@
     </dependencies>
 
     <build>
-      <plugins>
-       <plugin>
-	    <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-      <configuration>
-           <encoding>utf-8</encoding>
-           <source>1.8</source>
-           <target>1.8</target>
-           <archive>
-              <manifest>
-                 <mainClass>com.example.springbootci.SpringbootCiApplication</mainClass>
-               </manifest>
-            </archive>
-       </configuration>
-       <executions>
-          <execution>
-             <goals>
-                <goal>repackage</goal>
-             </goals>
-          </execution>
-       </executions>
-	</plugin>
-      </plugins>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
