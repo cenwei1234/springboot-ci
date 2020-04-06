@@ -19,12 +19,9 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                script{
-                  sh "docker --version"
-                }
                 echo 'current path ******************'
                 sh 'pwd'
-                echo 'delivery' 
+                sh './jenkins/scripts/deliver.sh'
             }
         }
     }
