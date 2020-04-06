@@ -39,21 +39,17 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>com.example.springbootci</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-            </plugin>
-        </plugins>
+      <plugins>
+       <plugin>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-maven-plugin</artifactId>
+	    <configuration>
+		<!-- 没有该配置，devtools 不生效 -->
+		<fork>true</fork>
+		<skip>true</skip>
+	    </configuration>
+	</plugin>
+      </plugins>
     </build>
 
 </project>
