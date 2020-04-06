@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn --version'
-                sh 'mvn -B -DskipTests clean package'
+                sh 'mvn -B -DskipTests clean package --settings /usr/local/maven3.6/conf/settings.xml'
             }
         }
         stage('Test') {
