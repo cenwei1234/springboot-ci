@@ -6,14 +6,6 @@ pipeline {
         }
     }
     stages {
-        stage('init') {
-           steps {
-            script{
-              def dockerPath = tool 'docker' 
-              env.PATH = "${dockerPath}/bin:${env.PATH}"
-            }
-           }
-        }
         stage('Build') {
             steps {
                 sh 'mvn --version'
@@ -33,7 +25,6 @@ pipeline {
                 echo 'current path ******************'
                 sh 'pwd'
                 echo 'delivery' 
-                sh 'docker login ${REGISTRY} -u ${DOCKERHUB_USERNAME} -p ${DOCKERHUB_PASSWORD}'
             }
         }
     }
