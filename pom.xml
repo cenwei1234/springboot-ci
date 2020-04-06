@@ -42,12 +42,24 @@
       <plugins>
        <plugin>
 	    <groupId>org.springframework.boot</groupId>
-	    <artifactId>spring-boot-maven-plugin</artifactId>
-	    <configuration>
-		<!-- 没有该配置，devtools 不生效 -->
-		<fork>true</fork>
-		<skip>true</skip>
-	    </configuration>
+      <artifactId>spring-boot-maven-plugin</artifactId>
+      <configuration>
+           <source>1.8</source>
+           <target>1.8</target>
+           <archive>
+              <manifest>
+                 <mainClass>com.example.springbootci.SpringbootCiApplication</mainClass>
+                 <addClasspath>true</addClasspath>
+                 <classpathPrefix>lib/</classpathPrefix>
+               </manifest>
+            </archive>
+       </configuration>
+       <executions>
+          <execution>
+             <goals>
+                <goal>repackage</goal>
+             </goals>
+          </execution>
 	</plugin>
       </plugins>
     </build>
