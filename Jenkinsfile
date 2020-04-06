@@ -18,9 +18,6 @@ pipeline {
             }
         }
         stage('Deliver') {
-            REGISTRY="hubtest.xiamenair.com.cn"
-            DOCKERHUB_PASSWORD="123@abc"
-            DOCKERHUB_USERNAME="22592"
             steps {
                 echo 'current path ******************'
                 sh 'pwd'
