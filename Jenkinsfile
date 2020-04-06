@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'mvn --version'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
@@ -21,6 +22,7 @@ pipeline {
                 echo 'current path ******************'
                 sh 'pwd'
                 echo 'delivery' 
+                sh 'service docker start'
                 sh 'bash docker --version'
             }
         }
