@@ -21,7 +21,7 @@ pipeline {
                 echo 'current path ******************'
                 sh 'pwd'
                 echo 'delivery' 
-                sh 'docker --version'
+                sh 'bash docker --version'
             }
         }
     }
