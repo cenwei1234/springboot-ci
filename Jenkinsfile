@@ -18,12 +18,14 @@ pipeline {
             }
         }
         stage('Deliver') {
+            REGISTRY=hubtest.xiamenair.com.cn
+            DOCKERHUB_PASSWORD=123@abc
+            DOCKERHUB_USERNAME=22592
             steps {
                 echo 'current path ******************'
                 sh 'pwd'
                 echo 'delivery' 
-                sh 'service docker start'
-                sh 'bash docker --version'
+                sh 'docker login ${REGISTRY} -u ${DOCKERHUB_USERNAME} -p ${DOCKERHUB_PASSWORD}'
             }
         }
     }
