@@ -21,8 +21,7 @@ pipeline {
             steps {
                 echo 'current path ******************'
                 sh 'pwd'
-                sh 'docker --version'
-                sh './jenkins/scripts/deliver.sh'
+                sh 'bash ./jenkins/scripts/deliver.sh'
             }
         }
     }
