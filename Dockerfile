@@ -5,4 +5,4 @@ VOLUME /tmp
 ADD ${WORKSPACE}/target/springboot-ci-0.0.1.jar app.jar 
 # 运行jar包
 RUN bash -c 'touch /app.jar'
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","-Xms4000m","-Xmx4000m","-Xss256k","-Xmn200m","-XX:-OmitStackTraceInFastThrow","/app.jar"]
