@@ -8,7 +8,7 @@ public class HelloWorldController {
 
     @RequestMapping("/hello")
     private String HelloWorld(){
-        return "cenwei-1232321";
+        return "cenwei-2020-04-18-14-05";
     }
 
 }
